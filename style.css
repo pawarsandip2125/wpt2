@@ -1,0 +1,35 @@
+body{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.grid{
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.grid td{
+    width: 80px;
+    height: 80px;
+    border: 2px solid black;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.controls{
+    margin-top: 10px;
+}
+
+input{
+    padding: 5px;
+    margin-top: 5px;
+}
+
+button{
+    padding: 6px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}

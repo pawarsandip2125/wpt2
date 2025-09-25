@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Select Cell Background Color</title>
+<link rel="stylesheet" href="style.css"><!--Link the css to html-->
+</head>
+<body>
+
+<h3>Task: select cell and set select cell background color</h3>
+
+<table class="grid"><!--make grid here we make table format-->
+  <tr>
+    <td id="cell1">1</td>
+    <td id="cell2">2</td>
+    <td id="cell3">3</td>
+  </tr>
+  <tr>
+    <td id="cell4">4</td>
+    <td id="cell5">5</td>
+    <td id="cell6">6</td>
+  </tr>
+  <tr>
+    <td id="cell7">7</td>
+    <td id="cell8">8</td>
+    <td id="cell9">9</td>
+  </tr>
+</table>
+
+<div class="controls"><!--control numbers, assign values from 1 to 9-->
+  <label>Enter Cell number:
+    <input type="number" id="cellNum" min="1" max="9" placeholder="1-9">
+  </label>
+  <br><br>
+  <label>Select Color:
+    <input type="color" id="color" placeholder="e.g. red or #ff0000">
+  </label>
+  <br><br>
+  <button onclick="setColor()">Set Background color</button>
+</div>
+
+<script>
+function setColor(){
+    const num   = document.getElementById("cellNum").value.trim();
+    const color = document.getElementById("color").value.trim();
+    if(!num || num < 1 || num > 9){
+        alert("Enter a valid cell number (1-9)");
+        return;
+    }
+    if(!color){
+        alert("Enter a color name or hex code");
+        return;
+    }
+    document.getElementById("cell"+num).style.backgroundColor = color;
+}
+</script>
+
+</body>
+</html>
